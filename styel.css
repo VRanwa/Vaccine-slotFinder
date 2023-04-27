@@ -1,0 +1,65 @@
+/* Common styles */
+
+.container {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.btn {
+    margin-top: 10px;
+}
+
+.table {
+    margin-top: 20px;
+}
+
+/* Title animation */
+
+.title {
+    animation-name: rotate;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+/* Table animation */
+
+.table tbody tr {
+    animation-name: zoom-in;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes zoom-in {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Media queries for responsive design */
+
+@media (max-width: 767px) {
+    .container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+    .table-responsive {
+        margin-top: 20px;
+    }
+}
